@@ -50,4 +50,4 @@ Guidlines for getting connected to the private network.
 
 `eth.sendTransaction(<amount to send here, e.g. 100000000>, {from:eth.accounts[0],to:"0X<insert account no>,gas:3000000})`
 
-Or open a UI, e.g. [mist](https://github.com/ethereum/mist)
+Or open a UI, e.g. [mist](https://github.com/ethereum/mist/releases), metamask chrome plugin (https://metamask.io/)
