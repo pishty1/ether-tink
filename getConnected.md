@@ -37,7 +37,7 @@ Guidlines for getting connected to the private network.
    If unsuccessful, check your firewall (allow connections on TCP port 33333).
 6. Next, in a new command window (leave the other one open):
        `geth attach`
-  *This gives you a javascript console to interact with; a `>` prompt*
+  *This gives you a javascript console to interact with; a `>` prompt* [command reference](https://github.com/ethereum/go-ethereum/wiki/JavaScript-Console#management-api-reference)
 7. Next do:
        `admin.addPeer("enode://6c461262a4cdb658d7852af41a433668dea467da87168390d02e22c6191fc136063a7df859e46a65786de6c3f73670f00d2378b5e17ec3142a84ded8029e1728@192.168.0.1:33333")`
   This creates the first Peer to Peer link and results in a connection to the RPi. The address enodeURL was taken from the RPi's node.
@@ -50,4 +50,4 @@ Guidlines for getting connected to the private network.
 
 `eth.sendTransaction(<amount to send here, e.g. 100000000>, {from:eth.accounts[0],to:"0X<insert account no>,gas:3000000})`
 
-Or open a UI, e.g. mist
+Or open a UI, e.g. [mist](https://github.com/ethereum/mist)
