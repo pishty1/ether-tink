@@ -7,7 +7,7 @@ Guidlines for getting connected to the private network.
  The network consists of Raspberry pi with dhcp server (ip address `192.168.0.1`) running a go-ethereum node initated with the `genesis.json` file (not mining).
  The intent is to create a network of local computers over which a private blockchain can be created. To help do this, follow the guidance below for different clients:
  
- ##Instructions for Go-ethereum "geth":
+ ### Instructions for Go-ethereum "geth":
  
 1. Install go-ethereum or other client; https://ethereum.github.io/go-ethereum/install/
 2. Establish ethernet connection to pi - connect cable to switch (or wifi to router) and make sure network interface "obtains IP address automatically" in your adapter settings.
