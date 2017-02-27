@@ -13,7 +13,8 @@ Guidlines for getting connected to the private network.
 2. Establish ethernet connection to pi - connect cable to switch (or wifi to router) and make sure network interface "obtains IP address automatically" in your adapter settings.
 3. Save the below as a file called `genesis.json`
 
-`{
+```json
+{
   "alloc": {},
   "nonce": "0x0000000000000042",
   "difficulty": "0x020000",
@@ -23,7 +24,8 @@ Guidlines for getting connected to the private network.
   "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
   "extraData": "0x",
   "gasLimit": "0x2fefd8"
-}`
+}
+```
 
 *This defines the genesis block for the private blockchain. This must be the same for all participants*
 
