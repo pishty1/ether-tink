@@ -33,14 +33,14 @@ Guidlines for getting connected to the private network.
    *This initialises the first block. You are now primed to connect to the priveate Ethereum p2p network*
 5. Now do:
        `geth --networkid 12345 --port 33333`
-   *This connects establishes the link (TCP) for your machine in the local network. The networkid and port were arbitrarily chosen when I set up the pi. N.b. `--verbosity 5`  will give lots of messages about the network and what is going on.*
+   *This gets the machine ready to find the local network. The networkid and port were arbitrarily chosen when I set up the pi. N.b. `--verbosity 5`  will give lots of messages about the network and what is going on.*
    If unsuccessful, check your firewall (allow connections on TCP port 33333).
 6. Next, in a new command window (leave the other one open):
        `geth attach`
   *This gives you a javascript console to interact with; a `>` prompt* [command reference](https://github.com/ethereum/go-ethereum/wiki/JavaScript-Console#management-api-reference)
 7. Next do:
        `admin.addPeer("enode://6c461262a4cdb658d7852af41a433668dea467da87168390d02e22c6191fc136063a7df859e46a65786de6c3f73670f00d2378b5e17ec3142a84ded8029e1728@192.168.0.1:33333")`
-  This creates the first Peer to Peer link and results in a connection to the RPi. The address enodeURL was taken from the RPi's node.
+  This connects the link (TCP) for your machine in the local network. It creates the first Peer to Peer link for your machine and results in a connection to the RaspberryPi. The address enodeURL was taken from the RPi's node.
 8. Do `admin.peers` to check, you should see a list of connected peers.
 9. `personal.newAccount("yourPassword")` to create a new accoount - it will give you a hex format accnt no
 10. `miner.setEtherbase("yourAccount")`
