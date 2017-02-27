@@ -7,7 +7,7 @@ Guidlines for getting connected to the private network.
  The network consists of Raspberry pi with dhcp server (ip address `192.168.0.1`) running a go-ethereum node initated with the `genesis.json` file (not mining).
  The intent is to create a network of local computers over which a private blockchain can be created. To help do this, follow the guidance below for different clients:
  
- ###Go-ethereum "geth":
+ ##Instructions for Go-ethereum "geth":
  
 1. Install go-ethereum or other client; https://ethereum.github.io/go-ethereum/install/
 2. Establish ethernet connection to pi - connect cable to switch (or wifi to router) and make sure network interface "obtains IP address automatically" in your adapter settings.
@@ -38,10 +38,14 @@ Guidlines for getting connected to the private network.
   *This gives you a javascript console to interact with; a `>` prompt*
 7. Next do:
        `admin.addPeer("enode://6c461262a4cdb658d7852af41a433668dea467da87168390d02e22c6191fc136063a7df859e46a65786de6c3f73670f00d2378b5e17ec3142a84ded8029e1728@192.168.0.1:33333")`
-  This creates the first Peer to Peer link and results in a connection to the RPi - you've found the network 
-8. Do `admin.peers` to check, you should see a list of connected peers
+  This creates the first Peer to Peer link and results in a connection to the RPi. The address enodeURL was taken from the RPi's node.
+8. Do `admin.peers` to check, you should see a list of connected peers.
 9. `personal.newAccount("yourPassword")` to create a new accoount - it will give you a hex format accnt no
 10. `miner.setEtherbase("yourAccount")`
 11. `miner.start()`
     *this will start mining, with the rewards going to your account. You are now in a position to start playing with smart contracts on the private network!*
+12. To send a transaction
 
+`eth.sendTransaction(<amount to send here, e.g. 100000000>, {from:eth.accounts[0],to:"0X<insert account no>,gas:3000000})`
+
+Or open a UI, e.g. mist
